@@ -14,11 +14,15 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int newScore)
     {
         scoreAmount += newScore;
-        scoreText.text = scoreAmount.ToString();
+        ChangeText();
     }
     public void SubtractScore(int newScore)
     {
         scoreAmount -= newScore;
-        scoreText.text = scoreAmount.ToString();
+        ChangeText();
+    }
+    private void ChangeText()
+    {
+        scoreText.text = $"Score : {scoreAmount}";
     }
 }
