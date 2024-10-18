@@ -12,12 +12,12 @@ public class KeyBox : MonoBehaviour
     public KeyCode CurrentKey { get => currentKey; set => currentKey = value; }
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         KeyBoxData keyBoxData = keyBoxes.RandomKeyBox();
         Set(keyBoxData);
     }
-    private void Set(KeyBoxData keyBoxData)
+    public void Set(KeyBoxData keyBoxData)
     {
         spriteRenderer.sprite = keyBoxData.keyImage;
         CurrentKey = keyBoxData.key;
