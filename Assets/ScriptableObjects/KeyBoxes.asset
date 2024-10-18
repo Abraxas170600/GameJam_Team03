@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ff791d039e19b469ba7d65c9af1e80, type: 3}
+  m_Name: KeyBoxes
+  m_EditorClassIdentifier: 
+  keyBoxData:
+  - key: 273
+    keyImage: {fileID: 0}
+  - key: 274
+    keyImage: {fileID: 0}
+  - key: 275
+    keyImage: {fileID: 0}
+  - key: 276
+    keyImage: {fileID: 0}
