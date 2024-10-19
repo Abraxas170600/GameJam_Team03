@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuOptions : MonoBehaviour
 {
+    public AudioClip Music;
+    private void Start() 
+    {
+        AudioManager.Instance.MusicPlay(Music);    
+    }
+
     public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);

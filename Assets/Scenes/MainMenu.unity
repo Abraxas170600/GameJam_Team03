@@ -410,8 +410,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1842078577}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SFXPlay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: ca1e4180aae38f047a55ce91a52d58d6, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1925061978}
-        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -494,7 +506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 569.895, y: -189.267}
+  m_AnchoredPosition: {x: 575, y: -283}
   m_SizeDelta: {x: 992.764, y: 207.596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &673023103
@@ -517,7 +529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dig Deeper '
+  m_text: 'Slime Deeper '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb30191a0e3083340a302af9e995b7f5, type: 2}
   m_sharedMaterial: {fileID: 7100749322153113819, guid: bb30191a0e3083340a302af9e995b7f5, type: 2}
@@ -628,8 +640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16.070007, y: 0.00048828125}
-  m_SizeDelta: {x: 32.14, y: -0.00097656}
+  m_AnchoredPosition: {x: -0.21502686, y: 0.00048828125}
+  m_SizeDelta: {x: -0.43005, y: -0.001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717975712
 MonoBehaviour:
@@ -644,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -789,7 +801,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 24.340698, w: 15.21286}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -893,6 +905,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1842078577}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SFXPlay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: ca1e4180aae38f047a55ce91a52d58d6, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1056,7 +1080,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 25.839844, w: 15.901428}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1152,7 +1176,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1557543135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1842078577}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SFXPlay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: ca1e4180aae38f047a55ce91a52d58d6, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1557543135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,7 +1347,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 25.179443, w: 15.737122}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1325,6 +1361,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558386733}
   m_CullTransparentMesh: 1
+--- !u!114 &1842078577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2869009392186472670, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+  m_PrefabInstance: {fileID: 1953743844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afce57d4f7467b6429ae365c2b5e5876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1925061973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1450,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1444,6 +1491,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6830172cfc8f694b916d7511c5c054b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Music: {fileID: 8300000, guid: c58f5f578700d4d438298b248377b646, type: 3}
+--- !u!1001 &1953743844
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.91552913
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.9851642
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.050096136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852482793368731130, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854349032477161297, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0da5dd213fd02754fbe0a036fe77e33a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1451,3 +1556,4 @@ SceneRoots:
   - {fileID: 655526603}
   - {fileID: 1925061977}
   - {fileID: 594910400}
+  - {fileID: 1953743844}
