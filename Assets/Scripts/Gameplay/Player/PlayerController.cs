@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private KeyCode currentKey;
     private bool canPress;
+    [SerializeField] private LifeManager lifeManager;
     [SerializeField] private SpawnManager spawnManager;
     [SerializeField] private ScoreManager scoreManager;
     void Update()
@@ -20,11 +21,13 @@ public class PlayerController : MonoBehaviour
             spawnManager.ReturnKeyBox();
             spawnManager.GetCurrentKeyBox();
             scoreManager.AddScore(Random.Range(100, 200));
+            lifeManager.UpdateLife(true);
             canPress = false;
             return;
         }
         else{
             scoreManager.SubtractScore(Random.Range(20, 60));
+            lifeManager.UpdateLife(false);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
