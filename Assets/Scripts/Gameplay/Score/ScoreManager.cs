@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int newScore)
     {
         scoreAmount += newScore;
+
+        RecordScore(scoreAmount);
         ChangeText();
     }
     public void SubtractScore(int newScore)
@@ -23,11 +25,17 @@ public class ScoreManager : MonoBehaviour
         if(scoreAmount < 0){
             scoreAmount = 0;
         }
-
         ChangeText();
     }
     private void ChangeText()
     {
         scoreText.text = $"{scoreAmount}";
+    }
+    private void RecordScore(int score)
+    {
+        if (score > PlayerPrefs.GetInt("RecordScore"))
+        {
+            PlayerPrefs.SetInt("RecordScore", score);
+        }
     }
 }

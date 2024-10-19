@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuOptions : MonoBehaviour
 {
-    public AudioClip Music;
+    [SerializeField] private AudioClip Music;
+    [SerializeField] private AudioClip clip;
 
-    AudioManager audioManager;
-    [SerializeField] AudioClip clip;
+    [SerializeField] private TMP_Text highScoreText;
 
     private void Start() 
     {
-        AudioManager.Instance.MusicPlay(Music);    
-        audioManager = AudioManager.Instance;
+        AudioManager.Instance.MusicPlay(Music);
+        highScoreText.text = $"High Score : {PlayerPrefs.GetInt("RecordScore")}";
     }
 
     public void Play()
@@ -23,7 +24,7 @@ public class MenuOptions : MonoBehaviour
 
     public void PlaySFX()
     {
-        audioManager.SFXPlay(clip);
+        AudioManager.Instance.SFXPlay(clip);
     }
     public void Quit()
     {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,8 +20,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip badSound;
 
     private float timeAmount = 100f;
+    private float timeSpeed = 30f;
     private bool isCounting = true;
+
     [SerializeField] private Image timeBar;
+
+    [SerializeField] private TMP_Text feedbackScoreText;
 
     private void Start()
     {
@@ -28,7 +33,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        timeAmount -= 30 * Time.deltaTime;
+        timeAmount -= timeSpeed * Time.deltaTime;
         timeBar.fillAmount = timeAmount / 100f;
 
         if (timeAmount <= 0f && isCounting)
@@ -37,27 +42,46 @@ public class PlayerController : MonoBehaviour
             feedbackManager.Fail();
         }
 
-        if (Input.anyKeyDown && canPress){
+        if (Input.anyKeyDown && canPress && !IsMouseButtonPressed() && Time.timeScale == 1)
+        {
             PressCurrentKey(currentKey);
         }
     }
     private void PressCurrentKey(KeyCode key)
     {
         if (Input.GetKeyDown(key)){
+            int RandomScore = Random.Range(50, 100);
+            feedbackScoreText.gameObject.SetActive(true);
+            feedbackScoreText.GetComponent<DOTweenAnimator>().Animate();
+            feedbackScoreText.text = $"+{RandomScore}";
+            feedbackScoreText.color = Color.yellow;
+
             StartCoroutine(spawnManager.ReturnKeyBox());
-            scoreManager.AddScore(Random.Range(100, 200));
+            scoreManager.AddScore(RandomScore);
             lifeManager.UpdateLife(true, feedbackManager);
             AudioManager.Instance.SFXPlay(goodSound);
             canPress = false;
             timeAmount = 100f;
+            timeSpeed += 0.4f;
             return;
         }
         else{
+            int RandomScore = Random.Range(20, 40);
+            feedbackScoreText.gameObject.SetActive(true);
+            feedbackScoreText.GetComponent<DOTweenAnimator>().Animate();
+            feedbackScoreText.text = $"-{RandomScore}";
+            feedbackScoreText.color = Color.red;
+
             playerAnimator.Play("Fail");
-            scoreManager.SubtractScore(Random.Range(20, 60));
+            scoreManager.SubtractScore(RandomScore);
             lifeManager.UpdateLife(false, feedbackManager);
+            timeSpeed -= 0.4f;
             AudioManager.Instance.SFXPlay(badSound);
         }
+    }
+    private bool IsMouseButtonPressed()
+    {
+        return Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
