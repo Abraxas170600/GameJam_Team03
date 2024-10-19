@@ -19,6 +19,11 @@ public class ScoreManager : MonoBehaviour
     public void SubtractScore(int newScore)
     {
         scoreAmount -= newScore;
+
+        if(scoreAmount < 0){
+            scoreAmount = 0;
+        }
+
         ChangeText();
     }
     private void ChangeText()

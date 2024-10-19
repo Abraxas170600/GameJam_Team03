@@ -17,8 +17,8 @@ public class LifeUI : MonoBehaviour
     {
         
     }
-    public void UpdateLife(int indice, bool state)
+    public void UpdateLife(int index, bool state)
     {
-        lifes[indice].SetActive(state);
+        lifes[index].SetActive(state);
     }
 }
