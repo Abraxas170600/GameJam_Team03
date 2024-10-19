@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 1657885044368211448}
   - component: {fileID: 4737084122162989835}
   - component: {fileID: 6444847277582148922}
+  - component: {fileID: 4679842716883647188}
   m_Layer: 0
   m_Name: KeyBox
   m_TagString: KeyBox
@@ -401,6 +402,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyBoxes: {fileID: 11400000, guid: 1e1866334819de548ac11b8813c5b375, type: 2}
   spriteRenderer: {fileID: 419626104676671253}
+--- !u!114 &4679842716883647188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4765471008965990561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225e534a14e4fe249b94367b4742760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  animations:
+  - animation: 6
+    appendTween: 0
+    unscaleTime: 0
+    easeAnimation: 28
+    timeToInsert: 0
+    tfEndValue: {fileID: 0}
+    vEndValue: {x: 0, y: 0, z: 0}
+    fEndValue: 0
+    useLocalCoords: 1
+    duration: 0.2
+    randomness: 0
+    elasticity: 0
+    vibrato: 0
+    fadeOut: 0
+    mode: 0
+    jumpPower: 0
+    numJumps: 0
+    componentType: 0
+    transitionType: 0
+    deactiveWithFadeOut: 0
+  delay: 0
+  loops: 0
+  OnFinishAnimation:
+    _PersistentCalls: []
+  startInAwake: 0
+  animateWithDelay: 0
 --- !u!1 &8096062598241407680
 GameObject:
   m_ObjectHideFlags: 0

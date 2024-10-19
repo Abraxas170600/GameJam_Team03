@@ -28,6 +28,6 @@ public class ScoreManager : MonoBehaviour
     }
     private void ChangeText()
     {
-        scoreText.text = $"Score : {scoreAmount}";
+        scoreText.text = $"{scoreAmount}";
     }
 }

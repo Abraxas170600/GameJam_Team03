@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private FeedbackManager feedbackManager;
 
+    [SerializeField] private AudioClip goodSound;
+    [SerializeField] private AudioClip badSound;
+
     private float timeAmount = 100f;
     private bool isCounting = true;
     [SerializeField] private Image timeBar;
@@ -41,10 +44,10 @@ public class PlayerController : MonoBehaviour
     private void PressCurrentKey(KeyCode key)
     {
         if (Input.GetKeyDown(key)){
-            spawnManager.ReturnKeyBox();
-            spawnManager.GetCurrentKeyBox();
+            StartCoroutine(spawnManager.ReturnKeyBox());
             scoreManager.AddScore(Random.Range(100, 200));
             lifeManager.UpdateLife(true, feedbackManager);
+            AudioManager.Instance.SFXPlay(goodSound);
             canPress = false;
             timeAmount = 100f;
             return;
@@ -53,6 +56,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.Play("Fail");
             scoreManager.SubtractScore(Random.Range(20, 60));
             lifeManager.UpdateLife(false, feedbackManager);
+            AudioManager.Instance.SFXPlay(badSound);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

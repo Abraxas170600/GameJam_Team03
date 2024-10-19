@@ -37,13 +37,18 @@ public class SpawnManager : MonoBehaviour
 
         currentKeyBox.gameObject.transform.SetParent(keyBoxTarget.transform);
         currentKeyBox.transform.position = new Vector2(keyBoxTarget.transform.position.x, keyBoxTarget.transform.position.y + posY);
-
         posY -= 3f;
     }
-    public void ReturnKeyBox()
+    public IEnumerator ReturnKeyBox()
     {
-        currentKeyBox.gameObject.SetActive(false);
+        currentKeyBox.gameObject.GetComponent<DOTweenAnimator>().Animate();
+
+        yield return new WaitForSeconds(0.2f);
+
         currentKeyBox.gameObject.transform.SetParent(keyBoxStorage.transform);
         currentKeyBox.transform.position = new Vector2(keyBoxStorage.transform.position.x, keyBoxStorage.transform.position.y);
+        currentKeyBox.transform.localScale = new Vector3(3f, 3f, 3f);
+        currentKeyBox.gameObject.SetActive(false);
+        GetCurrentKeyBox();
     }
 }

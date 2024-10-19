@@ -196,3 +196,7 @@ MonoBehaviour:
   lifeManager: {fileID: 0}
   spawnManager: {fileID: 0}
   scoreManager: {fileID: 0}
+  feedbackManager: {fileID: 0}
+  goodSound: {fileID: 8300000, guid: ab5af05b2d522dd4dad430ce715b7479, type: 3}
+  badSound: {fileID: 8300000, guid: bde7454db0d5bdd4096c2e400fb708e2, type: 3}
+  timeBar: {fileID: 0}
