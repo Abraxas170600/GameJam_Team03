@@ -50,34 +50,42 @@ public class PlayerController : MonoBehaviour
     private void PressCurrentKey(KeyCode key)
     {
         if (Input.GetKeyDown(key)){
-            int RandomScore = Random.Range(50, 100);
-            feedbackScoreText.gameObject.SetActive(true);
-            feedbackScoreText.GetComponent<DOTweenAnimator>().Animate();
-            feedbackScoreText.text = $"+{RandomScore}";
-            feedbackScoreText.color = Color.yellow;
-
-            StartCoroutine(spawnManager.ReturnKeyBox());
-            scoreManager.AddScore(RandomScore);
-            lifeManager.UpdateLife(true, feedbackManager);
-            AudioManager.Instance.SFXPlay(goodSound);
-            canPress = false;
-            timeAmount = 100f;
-            timeSpeed += 0.4f;
-            return;
+            PressCorrectKey();
         }
         else{
-            int RandomScore = Random.Range(20, 40);
-            feedbackScoreText.gameObject.SetActive(true);
-            feedbackScoreText.GetComponent<DOTweenAnimator>().Animate();
-            feedbackScoreText.text = $"-{RandomScore}";
-            feedbackScoreText.color = Color.red;
-
-            playerAnimator.Play("Fail");
-            scoreManager.SubtractScore(RandomScore);
-            lifeManager.UpdateLife(false, feedbackManager);
-            timeSpeed -= 0.4f;
-            AudioManager.Instance.SFXPlay(badSound);
+            PressIncorrectKey();
         }
+    }
+    private void PressCorrectKey()
+    {
+        int RandomScore = Random.Range(50, 100);
+        feedbackScoreText.gameObject.SetActive(true);
+        feedbackScoreText.GetComponent<DOTweenAnimator>().Animate();
+        feedbackScoreText.text = $"+{RandomScore}";
+        feedbackScoreText.color = Color.yellow;
+
+        StartCoroutine(spawnManager.ReturnKeyBox());
+        scoreManager.AddScore(RandomScore);
+        lifeManager.UpdateLife(true, feedbackManager);
+        AudioManager.Instance.SFXPlay(goodSound);
+        canPress = false;
+        timeAmount = 100f;
+        timeSpeed += 0.4f;
+        return;
+    }
+    private void PressIncorrectKey()
+    {
+        int RandomScore = Random.Range(20, 40);
+        feedbackScoreText.gameObject.SetActive(true);
+        feedbackScoreText.GetComponent<DOTweenAnimator>().Animate();
+        feedbackScoreText.text = $"-{RandomScore}";
+        feedbackScoreText.color = Color.red;
+
+        playerAnimator.Play("Fail");
+        scoreManager.SubtractScore(RandomScore);
+        lifeManager.UpdateLife(false, feedbackManager);
+        timeSpeed -= 0.4f;
+        AudioManager.Instance.SFXPlay(badSound);
     }
     private bool IsMouseButtonPressed()
     {
