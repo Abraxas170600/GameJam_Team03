@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 225319547}
   - component: {fileID: 225319549}
   - component: {fileID: 225319548}
+  - component: {fileID: 225319550}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -400,16 +401,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225319546}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 231648299}
+  m_Father: {fileID: 632390834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 2500, y: 0}
   m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225319548
@@ -509,6 +510,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225319546}
   m_CullTransparentMesh: 1
+--- !u!114 &225319550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225319546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225e534a14e4fe249b94367b4742760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  animations:
+  - animation: 0
+    appendTween: 0
+    unscaleTime: 1
+    easeAnimation: 28
+    timeToInsert: 0.4
+    tfEndValue: {fileID: 0}
+    vEndValue: {x: 100, y: 0, z: 0}
+    fEndValue: 0
+    useLocalCoords: 1
+    duration: 0.5
+    randomness: 0
+    elasticity: 0
+    vibrato: 0
+    fadeOut: 0
+    mode: 0
+    jumpPower: 0
+    numJumps: 0
+    componentType: 0
+    transitionType: 0
+    deactiveWithFadeOut: 0
+  delay: 0
+  loops: 0
+  OnFinishAnimation:
+    _PersistentCalls: []
+  startInAwake: 1
+  animateWithDelay: 0
 --- !u!1 &231648298
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +561,7 @@ GameObject:
   - component: {fileID: 231648299}
   - component: {fileID: 231648301}
   - component: {fileID: 231648300}
+  - component: {fileID: 231648302}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -538,13 +580,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 225319547}
+  m_Children: []
   m_Father: {fileID: 632390834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2400, y: 0}
   m_SizeDelta: {x: 1920, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231648300
@@ -585,6 +626,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231648298}
   m_CullTransparentMesh: 1
+--- !u!114 &231648302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231648298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225e534a14e4fe249b94367b4742760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  animations:
+  - animation: 0
+    appendTween: 0
+    unscaleTime: 1
+    easeAnimation: 3
+    timeToInsert: 0
+    tfEndValue: {fileID: 0}
+    vEndValue: {x: 0, y: 0, z: 0}
+    fEndValue: 0
+    useLocalCoords: 1
+    duration: 0.3
+    randomness: 0
+    elasticity: 0
+    vibrato: 0
+    fadeOut: 0
+    mode: 0
+    jumpPower: 0
+    numJumps: 0
+    componentType: 0
+    transitionType: 0
+    deactiveWithFadeOut: 0
+  delay: 0
+  loops: 0
+  OnFinishAnimation:
+    _PersistentCalls: []
+  startInAwake: 1
+  animateWithDelay: 0
 --- !u!1 &314870744
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +725,7 @@ GameObject:
   - component: {fileID: 463096010}
   - component: {fileID: 463096009}
   - component: {fileID: 463096008}
+  - component: {fileID: 463096011}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -660,7 +742,7 @@ RectTransform:
   m_GameObject: {fileID: 463096006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1497208888}
@@ -765,6 +847,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463096006}
   m_CullTransparentMesh: 1
+--- !u!114 &463096011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463096006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225e534a14e4fe249b94367b4742760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  animations:
+  - animation: 6
+    appendTween: 0
+    unscaleTime: 1
+    easeAnimation: 28
+    timeToInsert: 1.2
+    tfEndValue: {fileID: 0}
+    vEndValue: {x: 1, y: 1, z: 1}
+    fEndValue: 0
+    useLocalCoords: 1
+    duration: 0.2
+    randomness: 0
+    elasticity: 0
+    vibrato: 0
+    fadeOut: 0
+    mode: 0
+    jumpPower: 0
+    numJumps: 0
+    componentType: 0
+    transitionType: 0
+    deactiveWithFadeOut: 0
+  delay: 0
+  loops: 0
+  OnFinishAnimation:
+    _PersistentCalls: []
+  startInAwake: 1
+  animateWithDelay: 0
 --- !u!1 &473026817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,6 +2226,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 231648299}
+  - {fileID: 225319547}
   - {fileID: 1733029649}
   - {fileID: 1846961184}
   - {fileID: 463096007}
@@ -2164,6 +2287,7 @@ GameObject:
   - component: {fileID: 643884062}
   - component: {fileID: 643884064}
   - component: {fileID: 643884063}
+  - component: {fileID: 643884065}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2187,8 +2311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 600, y: 150}
+  m_AnchoredPosition: {x: 0, y: 500}
+  m_SizeDelta: {x: 1000, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &643884063
 MonoBehaviour:
@@ -2237,7 +2361,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2287,6 +2411,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643884061}
   m_CullTransparentMesh: 1
+--- !u!114 &643884065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643884061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225e534a14e4fe249b94367b4742760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  animations:
+  - animation: 0
+    appendTween: 0
+    unscaleTime: 1
+    easeAnimation: 3
+    timeToInsert: 0.3
+    tfEndValue: {fileID: 0}
+    vEndValue: {x: 0, y: 339.6745, z: 0}
+    fEndValue: 0
+    useLocalCoords: 1
+    duration: 0.2
+    randomness: 0
+    elasticity: 0
+    vibrato: 0
+    fadeOut: 0
+    mode: 0
+    jumpPower: 0
+    numJumps: 0
+    componentType: 0
+    transitionType: 0
+    deactiveWithFadeOut: 0
+  delay: 0
+  loops: 0
+  OnFinishAnimation:
+    _PersistentCalls: []
+  startInAwake: 1
+  animateWithDelay: 0
 --- !u!114 &665328216 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8252238692972869317, guid: fb238bddaa8dec84d94725cc7d1b42af, type: 3}
@@ -4351,7 +4515,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1556801028}
   - component: {fileID: 1556801030}
-  - component: {fileID: 1556801029}
+  - component: {fileID: 1556801032}
+  - component: {fileID: 1556801031}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -4378,7 +4543,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1556801029
+--- !u!222 &1556801030
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556801027}
+  m_CullTransparentMesh: 1
+--- !u!114 &1556801031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4387,7 +4560,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556801027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: f74a9c177a4c7b54cbc996c0cf87c097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollableImage: {fileID: 1556801032}
+  scrollSpeed: 0.1
+  scrollDirection: -1
+--- !u!114 &1556801032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556801027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -4398,24 +4586,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18f9034521a245d42bb1eccb721d15dc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1556801030
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556801027}
-  m_CullTransparentMesh: 1
+  m_Texture: {fileID: 2800000, guid: 18f9034521a245d42bb1eccb721d15dc, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1001 &1592087901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4736,6 +4913,7 @@ GameObject:
   - component: {fileID: 1733029649}
   - component: {fileID: 1733029651}
   - component: {fileID: 1733029650}
+  - component: {fileID: 1733029652}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4752,7 +4930,7 @@ RectTransform:
   m_GameObject: {fileID: 1733029648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 632390834}
@@ -4800,6 +4978,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733029648}
   m_CullTransparentMesh: 1
+--- !u!114 &1733029652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733029648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225e534a14e4fe249b94367b4742760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  animations:
+  - animation: 6
+    appendTween: 0
+    unscaleTime: 1
+    easeAnimation: 28
+    timeToInsert: 0.7
+    tfEndValue: {fileID: 0}
+    vEndValue: {x: 1, y: 1, z: 1}
+    fEndValue: 0
+    useLocalCoords: 0
+    duration: 0.3
+    randomness: 0
+    elasticity: 0
+    vibrato: 0
+    fadeOut: 0
+    mode: 0
+    jumpPower: 0
+    numJumps: 0
+    componentType: 0
+    transitionType: 0
+    deactiveWithFadeOut: 0
+  delay: 0
+  loops: 0
+  OnFinishAnimation:
+    _PersistentCalls: []
+  startInAwake: 1
+  animateWithDelay: 0
 --- !u!1 &1846961183
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,6 +5030,7 @@ GameObject:
   - component: {fileID: 1846961187}
   - component: {fileID: 1846961186}
   - component: {fileID: 1846961185}
+  - component: {fileID: 1846961188}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4828,7 +5047,7 @@ RectTransform:
   m_GameObject: {fileID: 1846961183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 31207516}
@@ -4933,6 +5152,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846961183}
   m_CullTransparentMesh: 1
+--- !u!114 &1846961188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846961183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225e534a14e4fe249b94367b4742760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  animations:
+  - animation: 6
+    appendTween: 0
+    unscaleTime: 1
+    easeAnimation: 28
+    timeToInsert: 1
+    tfEndValue: {fileID: 0}
+    vEndValue: {x: 1, y: 1, z: 1}
+    fEndValue: 0
+    useLocalCoords: 1
+    duration: 0.2
+    randomness: 0
+    elasticity: 0
+    vibrato: 0
+    fadeOut: 0
+    mode: 0
+    jumpPower: 0
+    numJumps: 0
+    componentType: 0
+    transitionType: 0
+    deactiveWithFadeOut: 0
+  delay: 0
+  loops: 0
+  OnFinishAnimation:
+    _PersistentCalls: []
+  startInAwake: 1
+  animateWithDelay: 0
 --- !u!1 &1875462401
 GameObject:
   m_ObjectHideFlags: 0
