@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip goodSound;
     [SerializeField] private AudioClip badSound;
 
+    [SerializeField] private float timeSpeed = 20f;
     private float timeAmount = 100f;
-    private float timeSpeed = 30f;
     private bool isCounting = true;
 
     [SerializeField] private Image timeBar;
@@ -70,7 +70,11 @@ public class PlayerController : MonoBehaviour
         AudioManager.Instance.SFXPlay(goodSound);
         canPress = false;
         timeAmount = 100f;
-        timeSpeed += 0.4f;
+
+        if (timeSpeed < 90f){
+            timeSpeed += 0.4f;
+        }
+
         return;
     }
     private void PressIncorrectKey()
@@ -95,6 +99,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("KeyBox")){
             currentKey = collision.gameObject.GetComponent<KeyBox>().CurrentKey;
+            playerAnimator.Play("Grounded");
             canPress = true;
         }
     }
